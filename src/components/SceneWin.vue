@@ -1,5 +1,10 @@
 <script setup>
 import { ref } from 'vue';
+
+defineOptions({
+  inheritAttrs: false
+})
+
 const emit = defineEmits(['jeszcze-raz','koniec-gry']);
 </script>
 

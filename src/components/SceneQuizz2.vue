@@ -2,6 +2,10 @@
 import { ref } from 'vue';
 import { Quests2 } from '../lib/quests-source2.js';
 
+defineOptions({
+  inheritAttrs: false
+})
+
 const props = defineProps({
     miejsceNaPlanszy: Number,
     msg: String

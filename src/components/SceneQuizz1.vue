@@ -2,6 +2,10 @@
 import { ref } from 'vue';
 import { Quests } from '../lib/quests-source.js';
 
+defineOptions({
+  inheritAttrs: false
+})
+
 const props = defineProps({
   miejsceNaPlanszy: Number,
   msg: String
@@ -216,7 +220,7 @@ function sprawdzOdpowiedz() {
   height: 40px;
   width: 40px;
   position: absolute;
-  visibility: visible;
+  visibility: hidden;
   z-index: 1;
 } 
 .krzyzyk1{

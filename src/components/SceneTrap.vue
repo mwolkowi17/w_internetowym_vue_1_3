@@ -3,6 +3,9 @@ import { ref } from 'vue';
 
 defineEmits(['koniec-pulapka']);
 
+defineOptions({
+  inheritAttrs: false
+})
 
 function koniecPulapki() {
     

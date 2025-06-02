@@ -8,7 +8,9 @@ import SceneTrap from './SceneTrap.vue';
 
 const emit = defineEmits(['koniec-etap1', 'przegrana'])
 
-
+defineOptions({
+  inheritAttrs: false
+})
 
 //roboczo tylko dla starej funkcji
 const postac1 = ref("postać")

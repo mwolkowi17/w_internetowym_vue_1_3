@@ -7,6 +7,10 @@ import SceneTrap from './SceneTrap.vue';
 import SceneQuizz2 from './SceneQuizz2.vue';
 
 
+defineOptions({
+  inheritAttrs: false
+})
+
 const emit= defineEmits(['koniec-etap2','przegrana2'])
 //roboczo tylko dla starej funkcji
 const postac1 = ref("postać")

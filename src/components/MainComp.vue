@@ -75,15 +75,15 @@ function koniec_gry() {
 
 
 <template>
-    <ScenaStart v-if="if_plansza_poczatkowa" @koniec-planszy="change()" />
-    <SceneInstruction v-if="if_instrukcja" @koniec-instrukcja="change_instrukcja()" />
-    <SceneLevelOneChoise v-if="if_level_one_choise" @wybor-levelu1="change_level_one_choise" />
-    <SceneLevelTwoChoise v-if="if_level_two_choise" @wybor-levelu1="change_level_one_choise"
-        @wybor-levelu2="change_level_two_choise" />
-    <SceneMain1 v-if="if_main1" @koniec-etap1="koniec_etapu1" @przegrana="loose"  rel="preload" />
-    <SceneMain2 v-if="if_main2" @koniec-etap2="koniec_etapu1" @przegrana2="loose" rel="preload"/>
-    <SceneWin v-if="if_win" @jeszcze-raz="graj_jeszcze_raz" @koniec-gry="koniec_gry" />
-    <SceneLoose v-if="if_loose" @jeszcze-raz="graj_jeszcze_raz" @koniec-gry="koniec_gry" />
+        <ScenaStart v-if="if_plansza_poczatkowa" @koniec-planszy="change()" />
+        <SceneInstruction v-if="if_instrukcja" @koniec-instrukcja="change_instrukcja()" />
+        <SceneLevelOneChoise v-if="if_level_one_choise" @wybor-levelu1="change_level_one_choise" />
+        <SceneLevelTwoChoise v-if="if_level_two_choise" @wybor-levelu1="change_level_one_choise"
+            @wybor-levelu2="change_level_two_choise" />
+        <SceneMain1 v-if="if_main1" @koniec-etap1="koniec_etapu1" @przegrana="loose" rel="preload" />
+        <SceneMain2 v-if="if_main2" @koniec-etap2="koniec_etapu1" @przegrana2="loose" rel="preload" />
+        <SceneWin v-if="if_win" @jeszcze-raz="graj_jeszcze_raz" @koniec-gry="koniec_gry" />
+        <SceneLoose v-if="if_loose" @jeszcze-raz="graj_jeszcze_raz" @koniec-gry="koniec_gry" />
 </template>
 
 <style>
