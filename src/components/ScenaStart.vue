@@ -22,8 +22,8 @@ onUnmounted(() => {
 </script>
 
 <template>
-    <div class="tlo" @keyup.enter="() => { console.log('enter!') }"></div>
-    <button class="start" @click="$emit('koniec-planszy')" aria-label="przycisk dalej"></button>
+    <div class="tlo" aria-label="Plansza startowa"></div>
+    <button class="start" @click="$emit('koniec-planszy')" role="img" alt="ikona Start" aria-label="przycisk start"></button>
 </template>
 
 <style>

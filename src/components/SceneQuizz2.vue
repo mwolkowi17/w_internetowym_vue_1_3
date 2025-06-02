@@ -3,7 +3,7 @@ import { ref } from 'vue';
 import { Quests2 } from '../lib/quests-source2.js';
 
 defineOptions({
-  inheritAttrs: false
+    inheritAttrs: false
 })
 
 const props = defineProps({
@@ -113,50 +113,57 @@ function sprawdzOdpowiedz() {
 
 </script>
 <template>
-    <div class="planszaQuizz1 " :class="eksp1[quizz_assets_data.pokaz_zadanie_2(props.miejsceNaPlanszy).pytanie]"></div>
+    <div class="planszaQuizz1 " :class="eksp1[quizz_assets_data.pokaz_zadanie_2(props.miejsceNaPlanszy).pytanie]"
+        role="img" alt="quizz" aria-label="plansza quizzu"></div>
     <!-- <div class="planszaQuizz1 " :class="eksp1[9]"></div> -->
     <p class="pytanie1">{{ quizz_assets_data.pokaz_zadanie_2(props.miejsceNaPlanszy).tresc }}</p>
-    <div class="krzyzyk" :class="{ 'krzyzyk1': is_krzyzyk1, 'krzyzyk2': is_krzyzyk2, 'krzyzyk3': is_krzyzyk3 }"></div>
+    <div class="krzyzyk" :class="{ 'krzyzyk1': is_krzyzyk1, 'krzyzyk2': is_krzyzyk2, 'krzyzyk3': is_krzyzyk3 }"
+        role="img" alt="zaznaczenie odpowiedzi" aria-label="zaznaczona odpowiedź"></div>
     <button class="pole-zazn pole1" @click="is_krzyzyk1 = true,
         is_krzyzyk2 = false,
         is_krzyzyk3 = false,
         if_button_dalej = true,
-        zaznaczenie1()
-        "></button>
+        zaznaczenie1()" role="img" alt="pole zaznaczenia" aria-label="zaznacz odpowiedź 1"></button>
 
     <!-- <p class="odpowiedz odpowiedz1">{{
         quizz_assets_data.pokaz_zadanie_2(props.miejsceNaPlanszy).odpowiedz_text[nr_zestawu][0]}}</p> -->
-    <p class="odpowiedz odpowiedz1" v-html="quizz_assets_data.pokaz_zadanie_2(props.miejsceNaPlanszy).odpowiedz_text[nr_zestawu][0]" ></p>
+    <p class="odpowiedz odpowiedz1"
+        v-html="quizz_assets_data.pokaz_zadanie_2(props.miejsceNaPlanszy).odpowiedz_text[nr_zestawu][0]"></p>
     <button class="pole-zazn pole2" @click="is_krzyzyk2 = true,
         is_krzyzyk1 = false,
         is_krzyzyk3 = false,
         if_button_dalej = true,
         zaznaczenie2()
-        "></button>
+        " role="img" alt="pole zaznaczenia" aria-label="zaznacz odpowiedź 2"></button>
 
     <!-- <p class="odpowiedz odpowiedz2">{{
         quizz_assets_data.pokaz_zadanie_2(props.miejsceNaPlanszy).odpowiedz_text[nr_zestawu][1] }}</p> -->
-    <p class="odpowiedz odpowiedz2" v-html="quizz_assets_data.pokaz_zadanie_2(props.miejsceNaPlanszy).odpowiedz_text[nr_zestawu][1]">
+    <p class="odpowiedz odpowiedz2"
+        v-html="quizz_assets_data.pokaz_zadanie_2(props.miejsceNaPlanszy).odpowiedz_text[nr_zestawu][1]">
     </p>
     <button class="pole-zazn pole3" @click="is_krzyzyk3 = true,
         is_krzyzyk1 = false,
         is_krzyzyk2 = false,
         if_button_dalej = true,
         zaznaczenie3()
-        "></button>
+        " role="img" alt="pole zaznaczenia" aria-label="zaznacz odpowiedź 3"></button>
 
     <!-- <p class="odpowiedz odpowiedz3">{{
         quizz_assets_data.pokaz_zadanie_2(props.miejsceNaPlanszy).odpowiedz_text[nr_zestawu][2] }}</p> -->
-    <p class="odpowiedz odpowiedz3" v-html=" quizz_assets_data.pokaz_zadanie_2(props.miejsceNaPlanszy).odpowiedz_text[nr_zestawu][2]"></p>
-    <button class="button-dalej" v-if="if_button_dalej" @click="sprawdzOdpowiedz()"></button>
-    <div class="plansza-dobrze" v-if="if_odpowiedz_dobrze"></div>
+    <p class="odpowiedz odpowiedz3"
+        v-html="quizz_assets_data.pokaz_zadanie_2(props.miejsceNaPlanszy).odpowiedz_text[nr_zestawu][2]"></p>
+    <button class="button-dalej" v-if="if_button_dalej" @click="sprawdzOdpowiedz()" role="img" alt="przycisk sprawdź"
+        aria-label="przycisk sprawdź odpowiedź"></button>
+    <div class="plansza-dobrze" v-if="if_odpowiedz_dobrze" role="img" alt="plansza dobra odpowiedź"
+        aria-label="plansza odpowiedź prawidłowa"></div>
     <button class="button-dalej-dobrze" v-if="if_button_dalej_dobrze" @click="if_odpowiedz_dobrze = false,
         if_button_dalej_dobrze = false,
-        $emit('koniec-quizz')"></button>
-    <div class="plansza-zle" v-if="if_odpowiedz_zle"></div>
+        $emit('koniec-quizz')" role="img" alt="przycisk dalej" aria-label="przycisk dalej - powrót do gry"></button>
+    <div class="plansza-zle" v-if="if_odpowiedz_zle" role="img" alt="plansza zła odpowiedź"
+        aria-label="plansza odpowiedź nieprawidłowa"></div>
     <button class="button-dalej-dobrze" v-if="if_button_dalej_zle" @click="if_odpowiedz_zle = false,
         if_button_dalej_zle = false,
-        $emit('koniec-quizz')"></button>
+        $emit('koniec-quizz')" role="img" alt="przycisk dalej" aria-label="przycisk dalej - powrót do gry"></button>
 
 </template>
 
@@ -232,12 +239,13 @@ function sprawdzOdpowiedz() {
     width: 50px;
     position: absolute;
 }
+
 .pole-zazn:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .pole-zazn:focus {
-  outline: thick double #08e926 !important;
+    outline: thick double #08e926 !important;
 }
 
 .pole1 {
@@ -258,8 +266,7 @@ function sprawdzOdpowiedz() {
     cursor: pointer;
 }
 
-.pole3
-{
+.pole3 {
     left: 130px;
     top: 465px;
 }
@@ -340,8 +347,8 @@ function sprawdzOdpowiedz() {
 }
 
 .button-dalej:focus {
- 
-  outline: thick double #08e926 !important;
+
+    outline: thick double #08e926 !important;
 }
 
 .plansza-dobrze {
@@ -378,10 +385,12 @@ function sprawdzOdpowiedz() {
     position: absolute;
     z-index: 2;
 }
+
 .button-dalej-dobrze:hover {
     cursor: pointer;
 }
+
 .button-dalej-dobrze:focus {
     outline: thick double #08e926 !important;
-}   
+}
 </style>

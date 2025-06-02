@@ -4,8 +4,8 @@ defineEmits(['koniec-instrukcja'])
 
 </script>
 <template>
-<div class="tlo1"  ></div>
-<button class="dalej" @click="$emit('koniec-instrukcja')"  ></button>
+<div class="tlo1" aria-label="Instrukcja gry"  ></div>
+<button class="dalej" @click="$emit('koniec-instrukcja')" role="img" alt="ikona Dalej" aria-label="Przycisk dalej"  ></button>
 </template>
 <style>
 .tlo1{

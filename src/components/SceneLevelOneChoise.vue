@@ -5,7 +5,7 @@ defineEmits(['wybor-levelu1']);
 
 <template>
     <div class="tlo-level1"></div>
-    <button class="level-one-button" @click="$emit('wybor-levelu1')"></button>
+    <button class="level-one-button" @click="$emit('wybor-levelu1')"  role="img" alt="ikona Level Pierwszy" aria-label="Przycisk poziom jeden" ></button>
 </template>
 
 <style scoped>
