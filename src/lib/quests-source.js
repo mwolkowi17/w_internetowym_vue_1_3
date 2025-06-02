@@ -70,7 +70,7 @@ export class Quests {
           ["anonimowość", "emocje", 2],
         ],
         odpowiedz: 1,
-        tresc: "Emotka           wyraża:",
+        tresc: "Emotka" + "\xa0  \xa0 \xa0 \xa0 " + "wyraża:",
       },
       {
         id: 9,
@@ -100,7 +100,7 @@ export class Quests {
           ["węża", "małpa", 2],
         ],
         odpowiedz: 1,
-        tresc: "W Polsce symbol          oznacza:",
+        tresc: "W Polsce symbol" + "\xa0  \xa0 \xa0" + " oznacza:",
       },
       {
         id: 13,

@@ -62,18 +62,18 @@ export class Quests2 {
         odpowiedz_text: [
           [
             "muszą być różne",
-            "wybierasz spośród dwóch haseł, których stale używasz",
+            "wybierasz spośród dwóch haseł,<br>   których stale używasz",
             "nie klikasz, emailem do znajomych",
             1,
           ],
           [
-            "wybierasz spośród dwóch haseł, których stale używasz",
+            "wybierasz spośród dwóch haseł,<br> których stale używasz",
             "muszą być różne",
             "nie klikasz, emailem do znajomych",
             2,
           ],
           [
-            "wybierasz spośród dwóch haseł, których stale używasz",
+            "wybierasz spośród dwóch haseł,<br> których stale używasz",
             "nie klikasz, emailem do znajomych",
             "muszą być różne",
             3,
@@ -135,21 +135,21 @@ export class Quests2 {
         pytanie: 7,
         odpowiedz_text: [
           [
-            "wylogowujesz się z portali, poczty i innych \naplikacji sieciowych",
+            "wylogowujesz się z portali, poczty i<br> innych \naplikacji sieciowych",
             "nie wylogowujesz się",
             "wylogowujesz się tylko z portali",
             1,
           ],
           [
             "nie wylogowujesz się",
-            "wylogowujesz się z portali, poczty i innych \naplikacji sieciowych",
+            "wylogowujesz się z portali, poczty i<br> innych \naplikacji sieciowych",
             "wylogowujesz się tylko z portali",
             2,
           ],
           [
             "nie wylogowujesz się",
             "wylogowujesz się tylko z portali",
-            "wylogowujesz się z portali, poczty i innych \naplikacji sieciowych",
+            "wylogowujesz się z portali, poczty i<br> innych \naplikacji sieciowych",
             3,
           ],
         ],
@@ -200,18 +200,18 @@ export class Quests2 {
           [
             "zamieszczać w internecie zdjęć osób bez ich zgody",
             "udostępniać zdjęć własnych zwierząt",
-            "umieszczać w internecie zdjęć osób, nawet wtedy, \ngdy się zgodzą",
+            "umieszczać w internecie zdjęć osób, nawet wtedy,<br> \ngdy się zgodzą",
             1,
           ],
           [
             "udostępniać zdjęć własnych zwierząt",
             "zamieszczać w internecie zdjęć osób bez ich zgody",
-            "umieszczać w internecie zdjęć osób, nawet wtedy, \ngdy się zgodzą",
+            "umieszczać w internecie zdjęć osób, nawet wtedy,<br> \ngdy się zgodzą",
             2,
           ],
           [
             "udostępniać zdjęć własnych zwierząt",
-            "umieszczać w internecie zdjęć osób, nawet wtedy, \ngdy się zgodzą",
+            "umieszczać w internecie zdjęć osób, nawet wtedy,<br> \ngdy się zgodzą",
             "zamieszczać w internecie zdjęć osób bez ich zgody",
             3,
           ],

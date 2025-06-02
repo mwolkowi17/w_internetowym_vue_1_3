@@ -8,42 +8,16 @@ import SceneTrap from './SceneTrap.vue';
 
 const emit = defineEmits(['koniec-etap1', 'przegrana'])
 
-// function spaceKeydown(event) {
-//     if (event.code === 'Space') {
-//         console.log('Naciśnięto Space');
-//         kostka_click()
-//         //emit('koniec-planszy');
-//         //document.removeEventListener('keydown', arguments.callee); // Usunięcie nasłuchiwania po pierwszym naciśnięciu
-//     }
-// }
 
-// onMounted(() => { document.addEventListener('keydown', spaceKeydown); }
-// )
-
-// onUnmounted(() => {
-//     document.removeEventListener('keydown', spaceKeydown);
-// });
-
-//========================================================
-
-// document.addEventListener('keydown', function (event) {
-//     if (event.code === 'Space') {
-//         console.log('Naciśnięto Space');
-//         kostka_click()
-//         //emit('koniec-planszy');
-//         //document.removeEventListener('keydown', arguments.callee); // Usunięcie nasłuchiwania po pierwszym naciśnięciu
-//     }
-//     //   console.log('Naciśnięto klawisz:', event.key);
-//     //   emit('koniec-planszy');
-// });
-
-//========================================================
 
 //roboczo tylko dla starej funkcji
 const postac1 = ref("postać")
 
 //pozycja startowa gracza nr 1
 const krok_gracz1_na_planszy = ref(0);
+
+//roboczo do edycji pytań
+//const krok_gracz1_na_planszy = ref(12);
 
 //zdefinowanie pozycji (mapy wszystkich pozycji) gracza nr 1
 const pozycje_pionka_gracza1 = new PawnMaps().pionek_gracza1;
@@ -62,6 +36,8 @@ const if_widok_pulapki = ref(false)
 
 //widoczność planszy quizz1
 const if_widok_quizz1 = ref(false);
+//roboczo do edycji pytań
+//const if_widok_quizz1 = ref(true);
 
 //widoki szans na planszy
 
@@ -276,9 +252,9 @@ const odejmijSzanse = () => {
         'kostka1image5': isSet5,
         'kostka1image6': isSet6
     }" v-if="if_widok_kostki"></div>
-    <SceneTrap v-if="if_widok_pulapki" @koniec-pulapka="if_widok_pulapki = false, koniecPulapki()" />
+    <SceneTrap v-if="if_widok_pulapki" @koniec-pulapka="if_widok_pulapki = false, koniecPulapki()" rel="preload"  />
     <SceneQuizz1 v-if="if_widok_quizz1" @koniec-quizz="if_widok_quizz1 = false, if_rzuc_kostka = true"
-        @odejmij-szanse="odejmijSzanse" msg="Hej" :miejsceNaPlanszy="krok_gracz1_na_planszy" />
+        @odejmij-szanse="odejmijSzanse" msg="Hej" :miejsceNaPlanszy="krok_gracz1_na_planszy" rel="preload"  />
 </template>
 <style scoped>
 .tlo2 {

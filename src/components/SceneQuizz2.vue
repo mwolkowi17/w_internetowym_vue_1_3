@@ -120,8 +120,9 @@ function sprawdzOdpowiedz() {
         zaznaczenie1()
         "></button>
 
-    <p class="odpowiedz odpowiedz1">{{
-        quizz_assets_data.pokaz_zadanie_2(props.miejsceNaPlanszy).odpowiedz_text[nr_zestawu][0]}}</p>
+    <!-- <p class="odpowiedz odpowiedz1">{{
+        quizz_assets_data.pokaz_zadanie_2(props.miejsceNaPlanszy).odpowiedz_text[nr_zestawu][0]}}</p> -->
+    <p class="odpowiedz odpowiedz1" v-html="quizz_assets_data.pokaz_zadanie_2(props.miejsceNaPlanszy).odpowiedz_text[nr_zestawu][0]" ></p>
     <button class="pole-zazn pole2" @click="is_krzyzyk2 = true,
         is_krzyzyk1 = false,
         is_krzyzyk3 = false,
@@ -129,8 +130,10 @@ function sprawdzOdpowiedz() {
         zaznaczenie2()
         "></button>
 
-    <p class="odpowiedz odpowiedz2">{{
-        quizz_assets_data.pokaz_zadanie_2(props.miejsceNaPlanszy).odpowiedz_text[nr_zestawu][1] }}</p>
+    <!-- <p class="odpowiedz odpowiedz2">{{
+        quizz_assets_data.pokaz_zadanie_2(props.miejsceNaPlanszy).odpowiedz_text[nr_zestawu][1] }}</p> -->
+    <p class="odpowiedz odpowiedz2" v-html="quizz_assets_data.pokaz_zadanie_2(props.miejsceNaPlanszy).odpowiedz_text[nr_zestawu][1]">
+    </p>
     <button class="pole-zazn pole3" @click="is_krzyzyk3 = true,
         is_krzyzyk1 = false,
         is_krzyzyk2 = false,
@@ -138,8 +141,9 @@ function sprawdzOdpowiedz() {
         zaznaczenie3()
         "></button>
 
-    <p class="odpowiedz odpowiedz3">{{
-        quizz_assets_data.pokaz_zadanie_2(props.miejsceNaPlanszy).odpowiedz_text[nr_zestawu][2] }}</p>
+    <!-- <p class="odpowiedz odpowiedz3">{{
+        quizz_assets_data.pokaz_zadanie_2(props.miejsceNaPlanszy).odpowiedz_text[nr_zestawu][2] }}</p> -->
+    <p class="odpowiedz odpowiedz3" v-html=" quizz_assets_data.pokaz_zadanie_2(props.miejsceNaPlanszy).odpowiedz_text[nr_zestawu][2]"></p>
     <button class="button-dalej" v-if="if_button_dalej" @click="sprawdzOdpowiedz()"></button>
     <div class="plansza-dobrze" v-if="if_odpowiedz_dobrze"></div>
     <button class="button-dalej-dobrze" v-if="if_button_dalej_dobrze" @click="if_odpowiedz_dobrze = false,

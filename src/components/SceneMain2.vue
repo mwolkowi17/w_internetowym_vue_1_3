@@ -13,6 +13,8 @@ const postac1 = ref("postać")
 
 //pozycja startowa gracza nr 1
 const krok_gracz1_na_planszy = ref(0);
+//roboczo do edycji quizów
+//const krok_gracz1_na_planszy = ref(15);
 
 //zdefinowanie pozycji (mapy wszystkich pozycji) gracza nr 1
 const pozycje_pionka_gracza1 = new PawnMaps().pionek_gracza1;
@@ -31,7 +33,8 @@ const if_widok_pulapki = ref(false)
 
 //widoczność planszy quizz1
 const if_widok_quizz2 = ref(false); 
-
+//roboczo do edycji quizów
+//const if_widok_quizz2 = ref(true); 
 //widoki szans na planszy
 
 const if_szansa1 = ref(true)
@@ -248,9 +251,9 @@ const odejmijSzanse = () => {
         'kostka1image5': isSet5,
         'kostka1image6': isSet6
     }" v-if="if_widok_kostki"></div>
-    <SceneTrap v-if="if_widok_pulapki" @koniec-pulapka="if_widok_pulapki = false, koniecPulapki()" />
+    <SceneTrap v-if="if_widok_pulapki" @koniec-pulapka="if_widok_pulapki = false, koniecPulapki()" rel="preload" />
     <SceneQuizz2 v-if="if_widok_quizz2" @koniec-quizz="if_widok_quizz2 = false, if_rzuc_kostka = true"
-        @odejmij-szanse="odejmijSzanse" msg="Hej" :miejsceNaPlanszy="krok_gracz1_na_planszy" />
+        @odejmij-szanse="odejmijSzanse" msg="Hej" :miejsceNaPlanszy="krok_gracz1_na_planszy" rel="preload"  />
 </template>
 
 <style scoped>

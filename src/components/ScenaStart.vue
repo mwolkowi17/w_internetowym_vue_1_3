@@ -3,15 +3,6 @@ import { ref,onMounted,onUnmounted } from 'vue'
 
 const emit = defineEmits(['koniec-planszy'])
 
-// document.addEventListener('keydown', function (event) {
-//     if (event.key === 'Enter') {
-//         console.log('Naciśnięto Enter');
-//         emit('koniec-planszy');
-//         document.removeEventListener('keydown', arguments.callee); // Usunięcie nasłuchiwania po pierwszym naciśnięciu
-//     }
-//     //   console.log('Naciśnięto klawisz:', event.key);
-//     //   emit('koniec-planszy');
-// });
 
 
 // przykład obsługi zdarzeń z klawiatury w Vue 3
