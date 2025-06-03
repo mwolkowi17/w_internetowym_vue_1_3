@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import ScenaStart from './ScenaStart.vue'
 import SceneInstruction from './SceneInstruction.vue'
 import SceneMain1 from './SceneMain1.vue';
@@ -71,30 +71,77 @@ function koniec_gry() {
     if_level_two_choise.value = false;
     if_plansza_poczatkowa.value = true;
 }
+
+
+// preload images
+const newImages = ref([])
+const images = [new URL('../assets/plansza_zasady_gry.png', import.meta.url).href,
+    new URL('../assets/pytanie1.png', import.meta.url).href,
+    new URL('../assets/pytanie2.png', import.meta.url).href,
+    new URL('../assets/pytanie3.png', import.meta.url).href,     
+    new URL('../assets/pytanie4.png', import.meta.url).href,
+    new URL('../assets/pytanie5.png', import.meta.url).href,
+    new URL('../assets/pytanie6.png', import.meta.url).href,
+    new URL('../assets/pytanie7.png', import.meta.url).href,
+    new URL('../assets/pytanie8.png', import.meta.url).href,
+    new URL('../assets/pytanie9.png', import.meta.url).href,
+    new URL('../assets/pytanie10.png', import.meta.url).href,
+    new URL('../assets/plansza_poziom1.png', import.meta.url).href,
+    new URL('../assets/8_plansza_poziom2.png', import.meta.url).href,
+    new URL('../assets/pytanie1_level2.png', import.meta.url).href,
+    new URL('../assets/pytanie2_level2.png', import.meta.url).href,
+    new URL('../assets/pytanie3_level2.png', import.meta.url).href,
+    new URL('../assets/pytanie4_level2.png', import.meta.url).href,
+    new URL('../assets/pytanie5_level2.png', import.meta.url).href,
+    new URL('../assets/pytanie6_level2.png', import.meta.url).href,
+    new URL('../assets/pytanie7_level2.png', import.meta.url).href,
+    new URL('../assets/pytanie8_level2.png', import.meta.url).href,
+    new URL('../assets/pytanie9_level2.png', import.meta.url).href,
+    new URL('../assets/pytanie10_level2.png', import.meta.url).href,
+    new URL('../assets/plansza_poziom1_wybor.png', import.meta.url).href,
+ 
+
+    
+]
+
+function preloadImages(imageUrls) {
+    return Promise.all(
+        imageUrls.map((url) => {
+            return new Promise((resolve, reject) => {
+                const img = new Image()
+                img.src = url
+                img.onload = resolve
+                img.onerror = reject
+            })
+        })
+    )
+}
+onMounted(async () => {
+    await preloadImages(images)
+  
+    newImages.value = images
+})
+
+
 </script>
 
 
 
 <template>
-    <div >
-        <ScenaStart  v-if="if_plansza_poczatkowa" @koniec-planszy="change()" />
+    <div>
+        <ScenaStart v-if="if_plansza_poczatkowa" @koniec-planszy="change()" />
         <SceneInstruction v-if="if_instrukcja" @koniec-instrukcja="change_instrukcja()" />
         <SceneLevelOneChoise v-if="if_level_one_choise" @wybor-levelu1="change_level_one_choise" />
         <SceneLevelTwoChoise v-if="if_level_two_choise" @wybor-levelu1="change_level_one_choise"
             @wybor-levelu2="change_level_two_choise" />
         <SceneMain1 v-if="if_main1" @koniec-etap1="koniec_etapu1" @przegrana="loose" />
-        <SceneMain2 v-if="if_main2" @koniec-etap2="koniec_etapu1" @przegrana2="loose"  />
+        <SceneMain2 v-if="if_main2" @koniec-etap2="koniec_etapu1" @przegrana2="loose" />
         <SceneWin v-if="if_win" @jeszcze-raz="graj_jeszcze_raz" @koniec-gry="koniec_gry" />
         <SceneLoose v-if="if_loose" @jeszcze-raz="graj_jeszcze_raz" @koniec-gry="koniec_gry" />
     </div>
 </template>
 
 <style scoped>
-
-
-
-
-
 .tytul {
     color: greenyellow;
 }
