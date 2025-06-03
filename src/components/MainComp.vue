@@ -68,6 +68,7 @@ function koniec_gry() {
     if_win.value = false;
     if_main1.value = false;
     if_main2.value = false;
+    if_level_two_choise.value = false;
     if_plansza_poczatkowa.value = true;
 }
 </script>

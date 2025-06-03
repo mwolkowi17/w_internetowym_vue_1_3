@@ -5,7 +5,7 @@ defineOptions({
   inheritAttrs: false
 })
 
-const emit = defineEmits(['jeszcze-raz','koniec-gry']);
+defineEmits(['jeszcze-raz','koniec-gry']);
 </script>
 
 <template>

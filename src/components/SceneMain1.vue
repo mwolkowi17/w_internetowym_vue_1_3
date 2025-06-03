@@ -195,7 +195,8 @@ function kostka_click() {
 
             } else {
                 console.log("quiz");
-                if_widok_quizz1.value = true
+                setTimeout(() => {
+                if_widok_quizz1.value = true},1000)
             }
         }
     };

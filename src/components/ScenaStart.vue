@@ -5,24 +5,10 @@ const emit = defineEmits(['koniec-planszy'])
 
 
 
-// przykład obsługi zdarzeń z klawiatury w Vue 3
-function handleKeydown(event) {
-    if (event.key === 'Enter') {
-        console.log('Naciśnięto Enter');
-        emit('koniec-planszy');
-    }
-}
-
-onMounted(() => {document.addEventListener('keydown', handleKeydown);}
-)
-
-onUnmounted(() => {
-    document.removeEventListener('keydown', handleKeydown);
-});
 </script>
 
 <template>
-    <div class="tlo" aria-label="Plansza startowa"></div>
+    <div class="tlo" role="img" alt="plansza" aria-label="Plansza startowa"></div>
     <button class="start" @click="$emit('koniec-planszy')" role="img" alt="ikona Start" aria-label="przycisk start"></button>
 </template>
 

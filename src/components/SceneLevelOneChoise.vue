@@ -6,6 +6,7 @@ defineEmits(['wybor-levelu1']);
 <template>
     <div class="tlo-level1"></div>
     <button class="level-one-button" @click="$emit('wybor-levelu1')"  role="img" alt="ikona Level Pierwszy" aria-label="Przycisk poziom jeden" ></button>
+    <button class="level-two-button"   role="img" alt="ikona Level Drugi" aria-label="Przycisk poziom dwa" disabled ></button>
 </template>
 
 <style scoped>
@@ -33,5 +34,16 @@ defineEmits(['wybor-levelu1']);
 }
 .level-one-button:focus {
     outline: thick double #08e926;
+}
+
+.level-two-button{
+    background-image: url("../assets/poziom2_nieaktywny_popr.png");
+    background-size: 392px 130px;
+    background-position: -2px -1px;
+    position: absolute;
+    top: 295px;
+    left: 712px;
+    width: 392px;
+    height: 130px;
 }
 </style>
