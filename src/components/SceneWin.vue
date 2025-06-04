@@ -9,9 +9,9 @@ defineEmits(['jeszcze-raz','koniec-gry']);
 </script>
 
 <template>
-<div class="plansza-win"></div>
-<button class="gram-jeszcze-1" @click="$emit('jeszcze-raz')"></button>
-<button class="zakoncz-gre" @click="$emit('koniec-gry')"></button>
+<div class="plansza-win" role="img" alt="plansza" aria-label="Plansza wygranej"></div>
+<button class="gram-jeszcze-1" @click="$emit('jeszcze-raz')" role="img" alt="ikona Gram Jeszcze" aria-label="przycisk gram jeszcze raz"></button>
+<button class="zakoncz-gre" @click="$emit('koniec-gry')" role="img" alt="ikona zakońćz grę" aria-label="przycisk zakończ grę"></button>
 </template>
 
 <style scoped>

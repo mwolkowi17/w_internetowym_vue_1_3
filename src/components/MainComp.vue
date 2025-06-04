@@ -99,9 +99,18 @@ const images = [new URL('../assets/plansza_zasady_gry.png', import.meta.url).hre
     new URL('../assets/pytanie9_level2.png', import.meta.url).href,
     new URL('../assets/pytanie10_level2.png', import.meta.url).href,
     new URL('../assets/plansza_poziom1_wybor.png', import.meta.url).href,
- 
-
-    
+    new URL('../assets/KOMUNIKAT_dobra_odp.png', import.meta.url).href,
+    new URL('../assets/KOMUNIKAT_zla_odp.png', import.meta.url).href,
+    new URL('../assets/kostka_1oczko.png', import.meta.url).href,
+    new URL('../assets/kostka_2oczka.png', import.meta.url).href,
+    new URL('../assets/kostka_3oczka.png', import.meta.url).href,
+    new URL('../assets/kostka_4oczka.png', import.meta.url).href,
+    new URL('../assets/kostka_5oczek.png', import.meta.url).href,
+    new URL('../assets/kostka_6oczek.png', import.meta.url).href,
+    new URL('../assets/przegrana_plansza.png', import.meta.url).href,
+    new URL('../assets/zakonczenie_gry_plansza.png', import.meta.url).href,
+    new URL('../assets/zasadzka.png', import.meta.url).href,
+    new URL('../assets/zycie1.png', import.meta.url).href,
 ]
 
 function preloadImages(imageUrls) {
