@@ -19,7 +19,7 @@ const postac1 = ref("postać")
 const krok_gracz1_na_planszy = ref(0);
 
 //roboczo do edycji pytań
-//const krok_gracz1_na_planszy = ref(12);
+//const krok_gracz1_na_planszy = ref(1);
 
 //zdefinowanie pozycji (mapy wszystkich pozycji) gracza nr 1
 const pozycje_pionka_gracza1 = new PawnMaps().pionek_gracza1;
@@ -191,7 +191,8 @@ function kostka_click() {
             if (trap.czy_polapka(krok_gracz1_na_planszy.value) === true) {
                 console.log("wpadka");
                 //  pokazuje planszę pułapki
-                if_widok_pulapki.value = true;
+                setTimeout(() => {
+                if_widok_pulapki.value = true}, 1000)
 
             } else {
                 console.log("quiz");
@@ -227,14 +228,15 @@ const odejmijSzanse = () => {
     console.log("ilosc_szans:" + ilosc_szans.value);
 
     if (ilosc_szans.value === 2) {
-        if_szansa1.value = false;
+        if_szansa3.value = false;
     }
     if (ilosc_szans.value === 1) {
         if_szansa2.value = false;
     }
     if (ilosc_szans.value === 0) {
-        if_szansa3.value = false;
+        if_szansa1.value = false;
         console.log("przegrałeś!!!");
+        if_widok_quizz1.value = false;
         emit('przegrana');
     }
 }
@@ -318,12 +320,12 @@ const odejmijSzanse = () => {
 
 .rzut1 {
     background-image: url("../assets/rzut_przycisk.png");
-    background-size: 220px 65px;
+    background-size: 251px 65px;
     background-repeat: no-repeat;
     top: 367px;
-    left: 1000px;
+    left: 988px;
     height: 67px;
-    width: 220px;
+    width: 251px;
     position: absolute;
     z-index: 2;
 }

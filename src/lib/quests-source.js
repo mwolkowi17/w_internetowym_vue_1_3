@@ -22,7 +22,7 @@ export class Quests {
           ["niebezpieczne", "bezpieczne", 2],
         ],
         odpowiedz: 1,
-        tresc: "Symbol kłódki" + "\xa0 \xa0 " + "oznacza połączenie:",
+        tresc: "Symbol kłódki" + "\xa0 \xa0 \xa0 " + "oznacza połączenie:",
       },
       {
         id: 2,
@@ -49,13 +49,13 @@ export class Quests {
         pytanie: 3,
         odpowiedz_text: [
           [
-            "indywidualnie-każda osoba ma swój",
+            "indywidualnie - każda osoba ma swój",
             "grupowo-wszyscy uczniowie mają swoje",
             1,
           ],
           [
             "grupowo-wszyscy uczniowie mają swoje",
-            "indywidualnie-każda osoba ma swój",
+            "indywidualnie - każda osoba ma swój",
             2,
           ],
         ],

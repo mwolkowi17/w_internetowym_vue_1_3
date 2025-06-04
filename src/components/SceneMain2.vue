@@ -188,7 +188,8 @@ function kostka_click() {
             if (trap.czy_polapka(krok_gracz1_na_planszy.value) === true) {
                 console.log("wpadka");
                 //  pokazuje planszę pułapki
-                if_widok_pulapki.value = true;
+                setTimeout(() => {
+                if_widok_pulapki.value = true}, 1000)
 
             } else {
                 console.log("quiz");
@@ -236,6 +237,7 @@ const odejmijSzanse = () => {
     if( ilosc_szans.value === 0) {
         if_szansa4.value = false;
         console.log("przegrałeś!!!");
+        if_widok_quizz2.value = false;
         emit('przegrana2');
     }
 }
@@ -321,12 +323,12 @@ const odejmijSzanse = () => {
 
 .rzut2 {
     background-image: url("../assets/rzut_przycisk.png");
-    background-size: 220px 65px;
+    background-size: 251px 65px;
     background-repeat: no-repeat;
     top: 367px;
-    left: 1000px;
+    left: 988px;
     height: 67px;
-    width: 220px;
+    width: 251px;
     position: absolute;
     z-index: 2;
 }

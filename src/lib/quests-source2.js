@@ -135,21 +135,21 @@ export class Quests2 {
         pytanie: 7,
         odpowiedz_text: [
           [
-            "wylogowujesz się z portali, poczty i<br> innych \naplikacji sieciowych",
+            "wylogowujesz się z portali, poczty i<br> innych aplikacji sieciowych",
             "nie wylogowujesz się",
             "wylogowujesz się tylko z portali",
             1,
           ],
           [
             "nie wylogowujesz się",
-            "wylogowujesz się z portali, poczty i<br> innych \naplikacji sieciowych",
+            "wylogowujesz się z portali, poczty i<br> innych aplikacji sieciowych",
             "wylogowujesz się tylko z portali",
             2,
           ],
           [
             "nie wylogowujesz się",
             "wylogowujesz się tylko z portali",
-            "wylogowujesz się z portali, poczty i<br> innych \naplikacji sieciowych",
+            "wylogowujesz się z portali, poczty i<br> innych aplikacji sieciowych",
             3,
           ],
         ],
@@ -200,18 +200,18 @@ export class Quests2 {
           [
             "zamieszczać w internecie zdjęć osób bez ich zgody",
             "udostępniać zdjęć własnych zwierząt",
-            "umieszczać w internecie zdjęć osób, nawet wtedy,<br> \ngdy się zgodzą",
+            "umieszczać w internecie zdjęć osób, nawet wtedy,<br> gdy się zgodzą",
             1,
           ],
           [
             "udostępniać zdjęć własnych zwierząt",
             "zamieszczać w internecie zdjęć osób bez ich zgody",
-            "umieszczać w internecie zdjęć osób, nawet wtedy,<br> \ngdy się zgodzą",
+            "umieszczać w internecie zdjęć osób, nawet wtedy,<br> gdy się zgodzą",
             2,
           ],
           [
             "udostępniać zdjęć własnych zwierząt",
-            "umieszczać w internecie zdjęć osób, nawet wtedy,<br> \ngdy się zgodzą",
+            "umieszczać w internecie zdjęć osób, nawet wtedy,<br> gdy się zgodzą",
             "zamieszczać w internecie zdjęć osób bez ich zgody",
             3,
           ],
