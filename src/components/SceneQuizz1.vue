@@ -99,24 +99,23 @@ function sprawdzOdpowiedz() {
   <div class="planszaQuizz1 " :class="eksp1[quizz_assets_data.pokaz_zadanie_2(props.miejsceNaPlanszy).pytanie]"
     alt="quizz" aria-label="plansza quizzu"></div>
 
-  <p class="pytanie1">{{ quizz_assets_data.pokaz_zadanie_2(props.miejsceNaPlanszy).tresc }}</p>
+  <p class="pytanie1 anim1">{{ quizz_assets_data.pokaz_zadanie_2(props.miejsceNaPlanszy).tresc }}</p>
   <div class="krzyzyk" :class="{ 'krzyzyk1': is_krzyzyk1, 'krzyzyk2': is_krzyzyk2 }" role="img" alt="zaznaczenie odpowiedzi"
     aria-label="zaznaczona odpowiedź"></div>
-  <button class="pole-zazn pole1" @click="is_krzyzyk1 = true,
+  <button class="pole-zazn pole1 anim1" @click="is_krzyzyk1 = true,
     is_krzyzyk2 = false,
     if_button_dalej = true,
     zaznaczenie1()" role="img" alt="pole zaznaczenia"
     aria-label="zaznacz odpowiedź 1"></button>
 
-  <p class="odpowiedz odpowiedz1">{{
+  <p class="odpowiedz odpowiedz1 anim1">{{
     quizz_assets_data.pokaz_zadanie_2(props.miejsceNaPlanszy).odpowiedz_text[nr_zestawu][0] }}</p>
-  <button class="pole-zazn pole2" @click="is_krzyzyk2 = true,
+  <button class="pole-zazn pole2 anim1" @click="is_krzyzyk2 = true,
     is_krzyzyk1 = false,
     if_button_dalej = true,
     zaznaczenie2()" role="img" alt="pole zaznaczenia"
     aria-label="zaznacz odpowiedź 2"></button>
-
-  <p class="odpowiedz odpowiedz2">{{
+  <p class="odpowiedz odpowiedz2 anim1">{{
     quizz_assets_data.pokaz_zadanie_2(props.miejsceNaPlanszy).odpowiedz_text[nr_zestawu][1] }}</p>
   <button class="button-dalej" v-if="if_button_dalej" @click="sprawdzOdpowiedz()" role="img" alt="przycisk sprawdź"
     aria-label="przycisk sprawdź odpowiedź"></button>
@@ -335,5 +334,20 @@ function sprawdzOdpowiedz() {
 .button-dalej-dobrze:focus {
   /* border: 4px solid #08e926; */
   outline: thick double #08e926 !important;
+}
+
+/* The animation code */
+@keyframes example {
+  /* from {background-color: red;}
+  to {background-color: yellow;} */
+  from {opacity: 0;}
+  to {opacity: 100;}
+}
+
+/* The element to apply the animation to */
+.anim1 {
+  
+  animation-name: example;
+  animation-duration: 1s;
 }
 </style>

@@ -116,10 +116,10 @@ function sprawdzOdpowiedz() {
     <div class="planszaQuizz1 " :class="eksp1[quizz_assets_data.pokaz_zadanie_2(props.miejsceNaPlanszy).pytanie]"
         role="img" alt="quizz" aria-label="plansza quizzu"></div>
     <!-- <div class="planszaQuizz1 " :class="eksp1[9]"></div> -->
-    <p class="pytanie1">{{ quizz_assets_data.pokaz_zadanie_2(props.miejsceNaPlanszy).tresc }}</p>
+    <p class="pytanie1 anim1">{{ quizz_assets_data.pokaz_zadanie_2(props.miejsceNaPlanszy).tresc }}</p>
     <div class="krzyzyk" :class="{ 'krzyzyk1': is_krzyzyk1, 'krzyzyk2': is_krzyzyk2, 'krzyzyk3': is_krzyzyk3 }"
         role="img" alt="zaznaczenie odpowiedzi" aria-label="zaznaczona odpowiedź"></div>
-    <button class="pole-zazn pole1" @click="is_krzyzyk1 = true,
+    <button class="pole-zazn pole1 anim1" @click="is_krzyzyk1 = true,
         is_krzyzyk2 = false,
         is_krzyzyk3 = false,
         if_button_dalej = true,
@@ -127,9 +127,9 @@ function sprawdzOdpowiedz() {
 
     <!-- <p class="odpowiedz odpowiedz1">{{
         quizz_assets_data.pokaz_zadanie_2(props.miejsceNaPlanszy).odpowiedz_text[nr_zestawu][0]}}</p> -->
-    <p class="odpowiedz odpowiedz1"
+    <p class="odpowiedz odpowiedz1 anim1"
         v-html="quizz_assets_data.pokaz_zadanie_2(props.miejsceNaPlanszy).odpowiedz_text[nr_zestawu][0]"></p>
-    <button class="pole-zazn pole2" @click="is_krzyzyk2 = true,
+    <button class="pole-zazn pole2 anim1" @click="is_krzyzyk2 = true,
         is_krzyzyk1 = false,
         is_krzyzyk3 = false,
         if_button_dalej = true,
@@ -138,10 +138,10 @@ function sprawdzOdpowiedz() {
 
     <!-- <p class="odpowiedz odpowiedz2">{{
         quizz_assets_data.pokaz_zadanie_2(props.miejsceNaPlanszy).odpowiedz_text[nr_zestawu][1] }}</p> -->
-    <p class="odpowiedz odpowiedz2"
+    <p class="odpowiedz odpowiedz2 anim1"
         v-html="quizz_assets_data.pokaz_zadanie_2(props.miejsceNaPlanszy).odpowiedz_text[nr_zestawu][1]">
     </p>
-    <button class="pole-zazn pole3" @click="is_krzyzyk3 = true,
+    <button class="pole-zazn pole3 anim1" @click="is_krzyzyk3 = true,
         is_krzyzyk1 = false,
         is_krzyzyk2 = false,
         if_button_dalej = true,
@@ -150,7 +150,7 @@ function sprawdzOdpowiedz() {
 
     <!-- <p class="odpowiedz odpowiedz3">{{
         quizz_assets_data.pokaz_zadanie_2(props.miejsceNaPlanszy).odpowiedz_text[nr_zestawu][2] }}</p> -->
-    <p class="odpowiedz odpowiedz3"
+    <p class="odpowiedz odpowiedz3 anim1"
         v-html="quizz_assets_data.pokaz_zadanie_2(props.miejsceNaPlanszy).odpowiedz_text[nr_zestawu][2]"></p>
     <button class="button-dalej" v-if="if_button_dalej" @click="sprawdzOdpowiedz()" role="img" alt="przycisk sprawdź"
         aria-label="przycisk sprawdź odpowiedź"></button>
@@ -392,5 +392,26 @@ function sprawdzOdpowiedz() {
 
 .button-dalej-dobrze:focus {
     outline: thick double #08e926 !important;
+}
+
+/* The animation code */
+@keyframes example {
+
+    /* from {background-color: red;}
+  to {background-color: yellow;} */
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 100;
+    }
+}
+
+/* The element to apply the animation to */
+.anim1 {
+
+    animation-name: example;
+    animation-duration: 1s;
 }
 </style>
