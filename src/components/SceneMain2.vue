@@ -225,17 +225,17 @@ const odejmijSzanse = () => {
     console.log("ilosc_szans:" + ilosc_szans.value);
 
     if (ilosc_szans.value === 3) {
-        if_szansa1.value = false;
+        if_szansa4.value = false;
     }
     if (ilosc_szans.value === 2) {
-        if_szansa2.value = false;
+        if_szansa3.value = false;
     }
     if (ilosc_szans.value === 1) {
-        if_szansa3.value = false;
+        if_szansa2.value = false;
         console.log("przegrałeś!!!");
     }
     if( ilosc_szans.value === 0) {
-        if_szansa4.value = false;
+        if_szansa1.value = false;
         console.log("przegrałeś!!!");
         if_widok_quizz2.value = false;
         emit('przegrana2');

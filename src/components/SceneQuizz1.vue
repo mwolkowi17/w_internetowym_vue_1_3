@@ -294,23 +294,23 @@ function sprawdzOdpowiedz() {
 
 .plansza-dobrze {
   background-image: url("../assets/KOMUNIKAT_dobra_odp.png");
-  background-size: 780px 380px;
+  background-size: 862px 380px;
   background-repeat: no-repeat;
   height: 380px;
-  width: 780px;
+  width: 862px;
   position: absolute;
-  left: 70px;
+  left: 43px;
   top: 170px;
 }
 
 .plansza-zle {
   background-image: url("../assets/KOMUNIKAT_zla_odp.png");
-  background-size: 780px 380px;
+  background-size: 862px 380px;
   background-repeat: no-repeat;
   height: 380px;
-  width: 780px;
+  width: 862px;
   position: absolute;
-  left: 70px;
+  left: 43px;
   top: 170px;
 }
 

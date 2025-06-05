@@ -50,11 +50,11 @@ export class Quests {
         odpowiedz_text: [
           [
             "indywidualnie - każda osoba ma swój",
-            "grupowo-wszyscy uczniowie mają swoje",
+            "grupowo - wszyscy uczniowie mają swoje",
             1,
           ],
           [
-            "grupowo-wszyscy uczniowie mają swoje",
+            "grupowo - wszyscy uczniowie mają swoje",
             "indywidualnie - każda osoba ma swój",
             2,
           ],
