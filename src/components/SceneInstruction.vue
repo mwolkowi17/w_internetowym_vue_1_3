@@ -1,10 +1,12 @@
 <script setup>
 import { ref } from 'vue'
+import { instrukcjaTekst } from '../lib/instrukcja';
 defineEmits(['koniec-instrukcja'])
 
 </script>
 <template>
-<div class="tlo1" aria-label="Instrukcja gry"  ></div>
+<!-- <div class="tlo1" aria-label="Instrukcja gry"  ></div> -->
+ <div class="tlo1" :aria-label="instrukcjaTekst"  ></div>
 <button class="dalej" @click="$emit('koniec-instrukcja')" role="img" alt="ikona Dalej" aria-label="Przycisk dalej"  ></button>
 </template>
 <style>
