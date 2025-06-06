@@ -142,8 +142,8 @@ onMounted(async () => {
 }
 
 .tlo {
-    background-image: url("../assets/plansza_start.png");
-    background-size: 1280px 720px;
+    /* background-image: url("../assets/plansza_start.png"); */
+    /* background-size: 1280px 720px; */
     height: 720px;
     width: 1280px;
     top: 0px;
