@@ -2,14 +2,29 @@
 import { ref,onMounted,onUnmounted } from 'vue'
 
 const emit = defineEmits(['koniec-planszy'])
+ const stageParent = ref(null)
+
+function openFullscreen() {
+        console.log("openFullscreen called");
+       
+        
+              const element = stageParent.value;
+              console.log("Element to fullscreen:", element);
+  if (element && element.requestFullscreen) {
+    element.requestFullscreen().catch((error) => {
+      console.log(error.message);
+    });
+  } else {
+    console.log('Fullscreen API not supported or ref not found');
+  }
 
 
-
+      }
 </script>
 
 <template>
-    <div class="tlo" role="img" alt="plansza" aria-label="Plansza startowa"></div>
-    <button class="start" @click="$emit('koniec-planszy')" role="img" alt="ikona Start" aria-label="przycisk start"></button>
+    <div ref="stageParent" class="tlo" role="img" alt="plansza" aria-label="Plansza startowa"></div>
+    <button class="start" @click="$emit('koniec-planszy'), openFullscreen()" role="img" alt="ikona Start" aria-label="przycisk start"></button>
 </template>
 
 <style>
